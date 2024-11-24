@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Books - Non-Fiction Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="crud.html">Manage Books</a></li>
+            <li><a href="analytics.html">Data Analytics</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section>
+        <h1>Manage Books</h1>
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Book Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="text" id="genre" placeholder="Genre" required>
+            <textarea id="description" placeholder="Description"></textarea>
+            <button type="button" onclick="createBook()">Create</button>
+            <button type="button" onclick="readBooks()">Read</button>
+            <button type="button" onclick="updateBook()">Update</button>
+            <button type="button" onclick="deleteBook()">Delete</button>
+        </form>
+
+        <!-- Display Books -->
+        <div id="book-list"></div>
+
+        <script src="script.js"></script>
+    </section>
+</body>
+</html>
