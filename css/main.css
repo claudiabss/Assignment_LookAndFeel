@@ -1,19 +1,41 @@
 
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body,
-html {
-  height: 100%;
-  align-content: center;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.6; /
 }
+
+/* Center the content and limit text width */
+.container {
+  max-width: 768px; 
+  margin: 0 auto;   
+  padding: 0 15px; 
+}
+
+/* Make the text responsive */
+p, h1, h2, h3 {
+  word-wrap: break-word; 
+  text-align: left;      
+}
+
+/* Add responsive behavior for smaller screens */
 @media (max-width: 768px) {
+  .container {
+      padding: 0 10px; 
+  }
   .nav-menu {
       flex-direction: column;
-      gap: 10px;
-  }
+      gap: 10px; }
+    .responsive-image {
+        width: 100%; 
+    }
+}
   nav {
       padding: 20px 0;
   }
-}
 body, ul {
   margin: 50;
   padding: 20;
@@ -21,9 +43,9 @@ body, ul {
 }
 
 nav {
-  background-color: #89664b; /* Dark background */
+  background-color: #89664b; 
   display: flex;
-  justify-content: center; /* Center align menu */
+  justify-content: center; 
   padding: 10px 0;
   position: sticky;
   top: 0;
