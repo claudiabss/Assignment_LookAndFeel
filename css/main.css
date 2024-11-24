@@ -81,6 +81,7 @@ nav {
 
 .nav-menu a {
   text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: white; /* Menu item color */
@@ -108,3 +109,9 @@ nav {
   width: 100%; /* Full width on hover */
 }
 
+.responsive-image {
+  max-width: 100%; /* Ensures the image scales down to fit its container */
+  height: auto;    /* Maintains the aspect ratio */
+  display: block;  /* Removes inline spacing below the image */
+  margin: 0 auto;  /* Centers the image horizontally */
+}
