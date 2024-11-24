@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
   line-height: 1.6; /
 }
@@ -36,7 +36,8 @@ p, h1, h2, h3 {
   nav {
       padding: 20px 0;
   }
-body, ul {
+
+  ul {
   margin: 50;
   padding: 20;
   box-sizing: border-box;
@@ -52,14 +53,10 @@ nav {
   z-index: 1000;
 }
 
-p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .nav-menu {
   list-style-type: none;
   display: flex;
-  gap: 20px; /* Spacing between items */
+  gap: 20px; 
 }
 
 .nav-menu li {
@@ -71,9 +68,9 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: white; /* Menu item color */
+  color: white; 
   padding: 10px 20px;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  transition: all 0.3s ease; 
 }
 
 .nav-menu a:hover {
@@ -87,18 +84,45 @@ p {
   left: 50%;
   width: 0;
   height: 3px;
-  background: #ff9800; /* Line color for hover effect */
-  transition: all 0.3s ease; /* Smooth line animation */
+  background: #ff9800; 
+  transition: all 0.3s ease; 
   transform: translateX(-50%);
 }
 
 .nav-menu a:hover::after {
-  width: 100%; /* Full width on hover */
+  width: 100%; 
 }
 
 .responsive-image {
-  max-width: 100%; /* Ensures the image scales down to fit its container */
-  height: auto;    /* Maintains the aspect ratio */
-  display: block;  /* Removes inline spacing below the image */
-  margin: 0 auto;  /* Centers the image horizontally */
+  max-width: 100%; 
+  height: auto;    
+  display: block;  
+  margin: 0 auto; 
+}
+
+.featured-books {
+  display: flex;               
+  flex-wrap: wrap;             
+  justify-content: space-between; 
+  gap: 20px;                   
+  padding: 20px;               
+  box-sizing: border-box;
+}
+
+/* Book item styling */
+.book-item {
+  flex: 1 1 calc(25% - 20px);  
+  box-sizing: border-box;     
+  background-color: #f8f9fa;  
+  padding: 15px;               
+  border: 1px solid #ddd;      
+  border-radius: 8px;          
+  text-align: center;          
+}
+
+/* Book image styling */
+.book-item img {
+  max-width: 100%;             
+  height: auto;                
+  margin-bottom: 10px;
 }
