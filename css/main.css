@@ -45,26 +45,57 @@ html {
   color: red;
   text-decoration: none;
 }
+body, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav {
-    background-color: #333;
+  background-color: #333; /* Dark background */
+  display: flex;
+  justify-content: center; /* Center align menu */
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav ul {
-    list-style-type: none;
-    overflow: hidden;
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 20px; /* Spacing between items */
 }
 
-nav ul li {
-    float: left;
+.nav-menu li {
+  position: relative;
 }
 
-nav ul li a {
-    display: block;
-    padding: 14px 16px;
-    color: white;
-    text-decoration: none;
+.nav-menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white; /* Menu item color */
+  padding: 10px 20px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-nav ul li a:hover {
-    background-color: #111;
+.nav-menu a:hover {
+  color: #ff9800; /* Text color on hover */
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #ff9800; /* Line color for hover effect */
+  transition: all 0.3s ease; /* Smooth line animation */
+  transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after {
+  width: 100%; /* Full width on hover */
 }
