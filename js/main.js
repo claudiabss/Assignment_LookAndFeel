@@ -7,6 +7,12 @@ function createBook() {
         genre: document.getElementById('genre').value,
         description: document.getElementById('description').value,
     };
+
+    if (!book.title || !book.author || !book.genre || !book.description) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
     books.push(book);
     alert('Book added successfully!');
     document.getElementById('book-form').reset();
@@ -20,10 +26,11 @@ function readBooks() {
         bookList.innerHTML += `
             <div class="book-item">
                 <h3>${book.title}</h3>
-                <p>${book.author} | ${book.genre}</p>
+                <p><strong>Author:</strong> ${book.author}</p>
+                <p><strong>Genre:</strong> ${book.genre}</p>
                 <p>${book.description}</p>
                 <button onclick="editBook(${index})">Edit</button>
-                <button onclick="removeBook(${index})">Delete</button>
+                <button onclick="deleteBook(${index})">Delete</button>
             </div>
         `;
     });
@@ -35,6 +42,11 @@ function updateBook(index) {
     const updatedGenre = document.getElementById('genre').value;
     const updatedDescription = document.getElementById('description').value;
 
+    if (!updatedTitle || !updatedAuthor || !updatedGenre || !updatedDescription) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
     books[index] = {
         title: updatedTitle,
         author: updatedAuthor,
@@ -44,6 +56,8 @@ function updateBook(index) {
 
     alert('Book updated successfully!');
     document.getElementById('book-form').reset();
+    document.getElementById('update-btn').style.display = 'none';
+    document.getElementById('create-btn').style.display = 'inline';
     readBooks();
 }
 
