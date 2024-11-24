@@ -32,7 +32,16 @@ p, h1, h2, h3 {
     .responsive-image {
         width: 100%; 
     }
+    .book-item {
+      flex: 1 1 calc(50% - 20px); }
+
 }
+@media (max-width: 480px) {
+  .book-item {
+      flex: 1 1 100%;           
+  }
+}
+/* Add navigation style */
   nav {
       padding: 20px 0;
   }
