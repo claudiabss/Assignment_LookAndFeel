@@ -1,5 +1,5 @@
-// script.js
-let books = [];
+
+let books = JSON.parse(localStorage.getItem('books')) || [];
 
 function createBook() {
     const book = {
@@ -9,6 +9,7 @@ function createBook() {
         description: document.getElementById('description').value,
     };
     books.push(book);
+    localStorage.setItem('books', JSON.stringify(books)); // Save to localStorage
     alert('Book added successfully!');
     document.getElementById('book-form').reset();
 }
@@ -26,11 +27,9 @@ function readBooks() {
 }
 
 function updateBook() {
-    // Mock update functionality
     alert('Update functionality not implemented in this mock.');
 }
 
 function deleteBook() {
-    // Mock delete functionality
     alert('Delete functionality not implemented in this mock.');
 }
