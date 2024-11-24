@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Analytics - Non-Fiction Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <!-- (Same as in index.html) -->
+
+    <!-- Main Content -->
+    <section>
+        <h1>Book Genre Distribution</h1>
+        <canvas id="genreChart" width="400" height="200"></canvas>
+
+        <script>
+            const ctx = document.getElementById('genreChart').getContext('2d');
+            const genreChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Biography', 'Science', 'History', 'Self-Help', 'Travel'],
+                    datasets: [{
+                        label: 'Number of Books',
+                        data: [12, 19, 7, 5, 8],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.2)',
+                            // Add more colors for each bar
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            // Add more colors for each bar
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        </script>
+    </section>
+</body>
+</html>
