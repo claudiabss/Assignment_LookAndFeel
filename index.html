@@ -6,26 +6,6 @@
     <title>Non-Fiction Books Home</title>
     <link rel="stylesheet" href="main.css">
 
-    // Load books from localStorage and display them on the homepage
-function displayBooksOnHomepage() {
-    const books = JSON.parse(localStorage.getItem('books')) || [];
-    const featuredBooksSection = document.querySelector('.featured-books');
-    featuredBooksSection.innerHTML = ''; // Clear the section
-
-    books.forEach((book) => {
-        const bookElement = document.createElement('div');
-        bookElement.classList.add('book-item');
-        bookElement.innerHTML = `
-            <h3>${book.title}</h3>
-            <p><strong>Author:</strong> ${book.author}</p>
-            <p><strong>Genre:</strong> ${book.genre}</p>
-            <p>${book.description}</p>
-        `;
-        featuredBooksSection.appendChild(bookElement);
-    });
-}
-// Call the function to display books on page load
-document.addEventListener('DOMContentLoaded', displayBooksOnHomepage);
 
 </head>
     
