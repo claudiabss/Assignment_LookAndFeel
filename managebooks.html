@@ -20,22 +20,15 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <section>
-        <h1>Manage Books</h1>
-        <form id="book-form">
-            <input type="text" id="title" placeholder="Book Title" required>
-            <input type="text" id="author" placeholder="Author" required>
-            <input type="text" id="genre" placeholder="Genre" required>
-            <textarea id="description" placeholder="Description"></textarea>
-            <button type="button" onclick="createBook()">Create</button>
-            <button type="button" onclick="readBooks()">Read</button>
-            <button type="button" onclick="updateBook()">Update</button>
-            <button type="button" onclick="deleteBook()">Delete</button>
-        </form>
-
-        <!-- Display Books -->
-        <div id="book-list"></div>
+    <form id="book-form">
+        <input type="text" id="title" placeholder="Book Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="text" id="genre" placeholder="Genre" required>
+        <textarea id="description" placeholder="Description"></textarea>
+        <button type="button" id="create-btn" onclick="createBook()">Create</button>
+        <button type="button" id="update-btn" style="display: none;">Update</button>
+    </form>
+    <div id="book-list"></div>
 
         <script src="./js/main.js"></script>
     </section>
