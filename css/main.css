@@ -8,12 +8,6 @@ body {
   line-height: 1.6; /
 }
 
-/* Center the content and limit text width */
-.container {
-  max-width: 1280px; 
-  margin: 0 auto;   
-  padding: 0 15px; 
-}
 
 /* Make the text responsive */
 p, h1, h2, h3 {
