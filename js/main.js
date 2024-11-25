@@ -29,8 +29,10 @@ function readBooks() {
                 <p><strong>Author:</strong> ${book.author}</p>
                 <p><strong>Genre:</strong> ${book.genre}</p>
                 <p>${book.description}</p>
-                <button onclick="editBook(${index})">Edit</button>
-                <button onclick="deleteBook(${index})">Delete</button>
+                <div class="action-buttons">
+                    <button class="edit-btn" onclick="editBook(${index})">Edit</button>
+                    <button class="delete-btn" onclick="deleteBook(${index})">Delete</button>
+                </div>
             </div>
         `;
     });
