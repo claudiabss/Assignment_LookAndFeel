@@ -1,55 +1,42 @@
-
-
 body {
   margin: 0;
   padding: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
-  line-height: 1.6; /
+  line-height: 1.6; /* Fixed comment */
 }
 
-
-/* Make the text responsive */
 p, h1, h2, h3 {
-  word-wrap: break-word; 
-  text-align: left;      
+  word-wrap: break-word;
+  text-align: left;
 }
 
-/* Add responsive behavior for smaller screens */
 @media (max-width: 768px) {
   .container {
-      padding: 0 10px; 
+    padding: 0 10px;
   }
   .nav-menu {
-      flex-direction: column;
-      gap: 10px; }
-    .responsive-image {
-        width: 100%; 
-    }
-    .book-item {
-      flex: 1 1 calc(50% - 20px); }
-
+    flex-direction: column;
+    gap: 10px;
+  }
+  .responsive-image {
+    width: 100%;
+  }
+  .book-item {
+    flex: 1 1 calc(50% - 20px);
+  }
 }
+
 @media (max-width: 480px) {
   .book-item {
-      flex: 1 1 100%;           
+    flex: 1 1 100%;
   }
-}
-/* Add navigation style */
-  nav {
-      padding: 20px 0;
-  }
-
-  ul {
-  margin: 50;
-  padding: 20;
-  box-sizing: border-box;
 }
 
 nav {
-  background-color: #89664b; 
+  background-color: #89664b;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   padding: 10px 0;
   position: sticky;
   top: 0;
@@ -59,7 +46,7 @@ nav {
 .nav-menu {
   list-style-type: none;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .nav-menu li {
@@ -71,13 +58,13 @@ nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: white; 
+  color: white;
   padding: 10px 20px;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .nav-menu a:hover {
-  color: #ff9800; /* Text color on hover */
+  color: #ff9800;
 }
 
 .nav-menu a::after {
@@ -87,50 +74,90 @@ nav {
   left: 50%;
   width: 0;
   height: 3px;
-  background: #ff9800; 
-  transition: all 0.3s ease; 
+  background: #ff9800;
+  transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 .nav-menu a:hover::after {
-  width: 100%; 
+  width: 100%;
 }
 
 .responsive-image {
-  max-width: 100%; 
-  height: auto;    
-  display: block;  
-  margin: 0 auto; 
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .featured-books {
-  display: flex;               
-  flex-wrap: wrap;             
-  justify-content: space-between; 
-  gap: 20px;                   
-  padding: 20px;               
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-/* Book item styling */
 .book-item {
-  flex: 1 1 calc(25% - 20px);  
-  box-sizing: border-box;     
-  background-color: #f8f9fa;  
-  padding: 15px;               
-  border: 1px solid #ddd;      
-  border-radius: 8px;          
-  text-align: center;          
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Book image styling */
 .book-item img {
-  max-width: 100%;             
-  height: auto;                
+  max-width: 100%;
+  height: auto;
   margin-bottom: 10px;
 }
 
-/*Add about-section styling */
+.book-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.book-item p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.book-item .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.book-item button {
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.book-item button.edit-btn {
+  background-color: #ffc107;
+}
+
+.book-item button.delete-btn {
+  background-color: #dc3545;
+}
+
+.book-item button:hover {
+  opacity: 0.9;
+}
 
 .about-section {
   padding: 20px;
@@ -165,7 +192,6 @@ nav {
   margin-bottom: 15px;
 }
 
-/* Forms css */
 .container {
   max-width: 900px;
   margin: 20px auto;
@@ -175,7 +201,6 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -190,11 +215,6 @@ header h1 {
 header p {
   color: #666;
   font-size: 16px;
-}
-
-/* Form Section */
-.form-section {
-  margin-bottom: 30px;
 }
 
 .form-group {
@@ -216,26 +236,6 @@ header p {
   border-radius: 4px;
 }
 
-.form-group textarea {
-  resize: vertical;
-}
-
-.button-group {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
 button#create-btn {
   background-color: #28a745;
 }
@@ -248,67 +248,8 @@ button:hover {
   opacity: 0.9;
 }
 
-/* Book List Section */
-.book-list-section h2 {
-  margin-bottom: 15px;
-  color: #333;
-  font-size: 22px;
-}
-
 .book-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-}
-
-.book-item {
-  background: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.book-item h3 {
-  font-size: 18px;
-  color: #333;
-  margin: 0 0 10px;
-}
-
-.book-item p {
-  font-size: 14px;
-  color: #555;
-  margin: 0 0 10px;
-}
-
-.book-item .action-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.book-item button {
-  padding: 8px 10px;
-  font-size: 14px;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.book-item button.edit-btn {
-  background-color: #ffc107;
-}
-
-.book-item button.delete-btn {
-  background-color: #dc3545;
-}
-
-.book-item button:hover {
-  opacity: 0.9;
 }
